@@ -132,110 +132,89 @@ public class NBA {
         Players KyleLowry = new Players(Raptors, 7, "Guard", "Kyle Lowry");
         Players JordanLoyd = new Players(Raptors, 8, "Guard", "Jordan Loyd");
         
-        ArrayList<Players> playerArray = new ArrayList(70);
-        //Celtics
-        playerArray.add(KyrieIrving);
-        playerArray.add(AronBanes);
-        playerArray.add(PJDozier);
-        playerArray.add(GordonHayward);
-        playerArray.add(AlHorford);
-        playerArray.add(RJHunter);
-        playerArray.add(MarcusMorris);
-        playerArray.add(JaylenBrown);
-        
-        //Lakers
-        playerArray.add(LonzoBall);
-        playerArray.add(ReggieBullock);
-        playerArray.add(AlexCaruso);
-        playerArray.add(LebronJames);
-        playerArray.add(TysonChandler);
-        playerArray.add(KyleKuzma);
-        playerArray.add(JoshHart);
-        playerArray.add(IsaacBonga);
-        
-        //Spurs
-        playerArray.add(LamarcusAldridge);
-        playerArray.add(MarcoBelinelli);
-        playerArray.add(DavisBertans);
-        playerArray.add(DanteCunniham);
-        playerArray.add(DeMarDeRozan);
-        playerArray.add(DrewEubanks);
-        playerArray.add(BenMoore);
-        playerArray.add(BryanForbes);
-        
-        //Warriors
-        playerArray.add(KlayThompson);
-        playerArray.add(DraymondGreen);
-        playerArray.add(DamianJones);
-        playerArray.add(JordanBell);
-        playerArray.add(StephenCurry);
-        playerArray.add(AndreIguodala);
-        playerArray.add(ShaunLivingston);
-        playerArray.add(QuinnCook);
-        
-        //Jazz
-        playerArray.add(GraysonAllen);
-        playerArray.add(TonyBradley);
-        playerArray.add(TylerCavanaugh);
-        playerArray.add(JaeCrowder);
-        playerArray.add(DanteExum);
-        playerArray.add(DerrickFavors);
-        playerArray.add(RudyGobert);
-        playerArray.add(JoeIngles);
-        
-        //Pistons
-        playerArray.add(BruceBrown);
-        playerArray.add(JoseCalderon);
-        playerArray.add(AndreDrummond);
-        playerArray.add(WayneEllington);
-        playerArray.add(LangstonGalloway);
-        playerArray.add(BlakeGriffin);
-        playerArray.add(ReggieJackson);
-        playerArray.add(LukeKennard);
-        
-        //Clippers
-        playerArray.add(PatrickBeverley);
-        playerArray.add(WilsonChandler);
-        playerArray.add(AngelDelgado);
-        playerArray.add(DaniloGallinari);
-        playerArray.add(JohnathanMotley);
-        playerArray.add(JeromeRobinson);
-        playerArray.add(LandryShamet);
-        playerArray.add(TyroneWallace);
-        
-        //Raptors
-        playerArray.add(ChrisBoucher);
-        playerArray.add(MarcGasol);
-        playerArray.add(DannyGreen);
-        playerArray.add(SergeIbaka);
-        playerArray.add(KawhiLeonard);
-        playerArray.add(JeremyLin);
-        playerArray.add(KyleLowry);
-        playerArray.add(JordanLoyd);
-        
-        
-        ArrayList<Coaches> coachArray = new ArrayList(8);
-        coachArray.add(coach1);
-        coachArray.add(coach2);
-        coachArray.add(coach3);
-        coachArray.add(coach4);
-        coachArray.add(coach5);
-        coachArray.add(coach6);
-        coachArray.add(coach7);
-        coachArray.add(coach8);
-        
-        HashMap<String, Teams> map = new HashMap<>();
-        map.put(Celtics.getName(), Celtics);
-        map.put(Lakers.getName(), Lakers);
-        map.put(Jazz.getName(), Jazz);
-        map.put(Pistons.getName(), Pistons);
-        map.put(Spurs.getName(), Spurs);
-        map.put(Warriors.getName(), Warriors);
-        map.put(Clippers.getName(), Clippers);
-        map.put(Raptors.getName(), Raptors);
-        
-        for (int i = 0; i < 10; i++)
+        ArrayList<Players> playerArray = new ArrayList(64);
+         for (int i = 0; i < 64; i++)
         {
+            //Celtics
+            playerArray.add(KyrieIrving);
+            playerArray.add(AronBanes);
+            playerArray.add(PJDozier);
+            playerArray.add(GordonHayward);
+            playerArray.add(AlHorford);
+            playerArray.add(RJHunter);
+            playerArray.add(MarcusMorris);
+            playerArray.add(JaylenBrown);
+
+            //Lakers
+            playerArray.add(LonzoBall);
+            playerArray.add(ReggieBullock);
+            playerArray.add(AlexCaruso);
+            playerArray.add(LebronJames);
+            playerArray.add(TysonChandler);
+            playerArray.add(KyleKuzma);
+            playerArray.add(JoshHart);
+            playerArray.add(IsaacBonga);
+
+            //Spurs
+            playerArray.add(LamarcusAldridge);
+            playerArray.add(MarcoBelinelli);
+            playerArray.add(DavisBertans);
+            playerArray.add(DanteCunniham);
+            playerArray.add(DeMarDeRozan);
+            playerArray.add(DrewEubanks);
+            playerArray.add(BenMoore);
+            playerArray.add(BryanForbes);
+
+            //Warriors
+            playerArray.add(KlayThompson);
+            playerArray.add(DraymondGreen);
+            playerArray.add(DamianJones);
+            playerArray.add(JordanBell);
+            playerArray.add(StephenCurry);
+            playerArray.add(AndreIguodala);
+            playerArray.add(ShaunLivingston);
+            playerArray.add(QuinnCook);
+
+            //Jazz
+            playerArray.add(GraysonAllen);
+            playerArray.add(TonyBradley);
+            playerArray.add(TylerCavanaugh);
+            playerArray.add(JaeCrowder);
+            playerArray.add(DanteExum);
+            playerArray.add(DerrickFavors);
+            playerArray.add(RudyGobert);
+            playerArray.add(JoeIngles);
+
+            //Pistons
+            playerArray.add(BruceBrown);
+            playerArray.add(JoseCalderon);
+            playerArray.add(AndreDrummond);
+            playerArray.add(WayneEllington);
+            playerArray.add(LangstonGalloway);
+            playerArray.add(BlakeGriffin);
+            playerArray.add(ReggieJackson);
+            playerArray.add(LukeKennard);
+
+            //Clippers
+            playerArray.add(PatrickBeverley);
+            playerArray.add(WilsonChandler);
+            playerArray.add(AngelDelgado);
+            playerArray.add(DaniloGallinari);
+            playerArray.add(JohnathanMotley);
+            playerArray.add(JeromeRobinson);
+            playerArray.add(LandryShamet);
+            playerArray.add(TyroneWallace);
+
+            //Raptors
+            playerArray.add(ChrisBoucher);
+            playerArray.add(MarcGasol);
+            playerArray.add(DannyGreen);
+            playerArray.add(SergeIbaka);
+            playerArray.add(KawhiLeonard);
+            playerArray.add(JeremyLin);
+            playerArray.add(KyleLowry);
+            playerArray.add(JordanLoyd);
+            
             if (playerArray.get(i).getTeam() == Celtics)
             {
                     Celtics.players.add(playerArray.get(i));            
@@ -270,6 +249,26 @@ public class NBA {
             }
         }
         
+        ArrayList<Coaches> coachArray = new ArrayList(8);
+        coachArray.add(coach1);
+        coachArray.add(coach2);
+        coachArray.add(coach3);
+        coachArray.add(coach4);
+        coachArray.add(coach5);
+        coachArray.add(coach6);
+        coachArray.add(coach7);
+        coachArray.add(coach8);
+        
+        HashMap<String, Teams> map = new HashMap<>();
+        map.put(Celtics.getName(), Celtics);
+        map.put(Lakers.getName(), Lakers);
+        map.put(Jazz.getName(), Jazz);
+        map.put(Pistons.getName(), Pistons);
+        map.put(Spurs.getName(), Spurs);
+        map.put(Warriors.getName(), Warriors);
+        map.put(Clippers.getName(), Clippers);
+        map.put(Raptors.getName(), Raptors);
+        
         Collections.sort(Celtics.players);
         Collections.sort(Lakers.players);
         Collections.sort(Jazz.players);
@@ -279,6 +278,11 @@ public class NBA {
         Collections.sort(Clippers.players);
         Collections.sort(Raptors.players);
         
+        Collections.sort(playerArray);
+
+//     creates an error - Collections.sort(coachArray);
+
+        BinarySearchComparator searchObj = new BinarySearchComparator();
         
     String option = JOptionPane.showInputDialog("1. Search by Team \n2. Search by Player\n3. Search by Coach");
     int choice = Integer.parseInt(option);
@@ -318,15 +322,29 @@ public class NBA {
         if (choice4 == 1)
         {
             String option5 = JOptionPane.showInputDialog("Enter Player's name:");
-            //binary search for that name in playerArray
+            int index = Collections.binarySearch(playerArray, new Players(null, 0, null, option5), searchObj.c);
+            if(index >= 0){
+                System.out.println("Player found at index " + index);
+                System.out.println("Here are the player's stats: " + playerArray.get(index).toString());
+            }
+            else if(index < 0) {
+                System.out.println("Player doesn't exist");
+            }
         }
-        else if (choice == 2)
+        else if (choice4 == 2)
         {
+            //Isn't working - only outputs "Player doesn't exist"
             String option6 = JOptionPane.showInputDialog("Enter Player's Jersey Number: ");
-            //binary search for that number in playerArray
+            int jerseyNumber = Integer.parseInt(option6);
+            int index = Collections.binarySearch(playerArray, new Players(null, jerseyNumber, null, null), searchObj.d);
+            if(index >= 0){
+                System.out.println(playerArray.get(index).getName());
+            }
+            else if(index < 0) {
+                System.out.println("Player doesn't exist");
+            }
         }
     }
-    
     else if (choice == 3)
     {
         String option6 = JOptionPane.showInputDialog("1. Search by Coach Name\n 2. Display a Team's coach");
@@ -334,20 +352,25 @@ public class NBA {
         if (choice6 == 1)
         {
             String option7 = JOptionPane.showInputDialog("Enter the Coach's Name: ");
-            //binary search
+            int index = Collections.binarySearch(coachArray, new Coaches(option7, 0), searchObj.e);
+            if(index >= 0){
+                System.out.println(coachArray.get(index).getName());
+            }
+            else if(index < 0) {
+                System.out.println("Coach doesn't exist");
+            }
         }
         
         else if (choice6 == 2)
         {
             String option8 = JOptionPane.showInputDialog("Enter a Team: ");
             if (map.containsKey(option8))
-                {
+            {
                     Teams a = map.get(option8); 
                     Coaches b = a.getCoach();
                     JOptionPane.showMessageDialog(null, b.getName() + " - " + b.getRecord() + " years");
-                }
+            }
         }
     }
-  }
-    
+  }  
 }
