@@ -6,7 +6,7 @@ public class Teams {
 
     private String name;
     private int identifier;
-    private String record;
+    private final String record;
     
     public Teams(String name, Integer identifier, String record)   {
         this.name = name;
@@ -30,7 +30,6 @@ public class Teams {
         this.identifier = identifier;
     }
     
-    //public List<Players> players;
     public List<Players> players = new ArrayList<>(8);
     private Coaches coach;
 
@@ -45,6 +44,6 @@ public class Teams {
     @Override
     public String toString()
     {
-        return  "  " + record + "\n";
+        return  "  : " + record + "\n";
     }
 }
