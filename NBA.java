@@ -1,15 +1,13 @@
 package nba;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Collections;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class NBA {
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) 
+    {
         Coaches coach1;
         Coaches coach2;
         Coaches coach3;
@@ -133,7 +131,7 @@ public class NBA {
         Players JordanLoyd = new Players(Raptors, 8, "Guard", "Jordan Loyd");
         
         ArrayList<Players> playerArray = new ArrayList(64);
-         for (int i = 0; i < 64; i++)
+        for (int i = 0; i < 64; i++)
         {
             //Celtics
             playerArray.add(KyrieIrving);
@@ -248,8 +246,8 @@ public class NBA {
                     Raptors.players.add(playerArray.get(i));
             }
         }
-        
-        ArrayList<Coaches> coachArray = new ArrayList(8);
+       
+        ArrayList<Coaches> coachArray = new ArrayList<>(8);
         coachArray.add(coach1);
         coachArray.add(coach2);
         coachArray.add(coach3);
@@ -258,7 +256,8 @@ public class NBA {
         coachArray.add(coach6);
         coachArray.add(coach7);
         coachArray.add(coach8);
-        
+
+                
         HashMap<String, Teams> map = new HashMap<>();
         map.put(Celtics.getName(), Celtics);
         map.put(Lakers.getName(), Lakers);
@@ -277,100 +276,103 @@ public class NBA {
         Collections.sort(Warriors.players);
         Collections.sort(Clippers.players);
         Collections.sort(Raptors.players);
-        
-        Collections.sort(playerArray);
-
-//     creates an error - Collections.sort(coachArray);
 
         BinarySearchComparator searchObj = new BinarySearchComparator();
-        
-    String option = JOptionPane.showInputDialog("1. Search by Team \n2. Search by Player\n3. Search by Coach");
-    int choice = Integer.parseInt(option);
-    
-    if (choice == 1)
-    {
-        String option2 = JOptionPane.showInputDialog("1. Show all Teams \n2. Enter a team name");
-        int choice2 = Integer.parseInt(option2);
+
+        String option = JOptionPane.showInputDialog("1. Search by Team \n2. Search by Player\n3. Search by Coach");
+        int choice = Integer.parseInt(option);
+
+        if (choice == 1)
         {
-            if (choice2 == 1)
+            String option2 = JOptionPane.showInputDialog("1. Show all Teams \n2. Enter a team name");
+            int choice2 = Integer.parseInt(option2);
             {
-                String output = map.toString().replace("{", "").replace("}", "").replace(", ", "").replace("= ", "");
-                JOptionPane.showMessageDialog(null, output);
-            }
-            else if (choice2 == 2)
-            {
-                String option3 = JOptionPane.showInputDialog("Enter team name:");
-                if (map.containsKey(option3))
+                
+                if (choice2 == 1)
                 {
-                    Teams a = map.get(option3);
-                    String sum = " ";
-                    for (int i=0; i<a.players.size(); i++) 
+                    String output = map.toString().replace("{", "").replace("}", "").replace(", ", "").replace("= ", "");
+                    JOptionPane.showMessageDialog(null, output);
+                }
+                else if (choice2 == 2)
+                {
+                    String option3 = JOptionPane.showInputDialog("Enter team name:");
+                    if (map.containsKey(option3))
                     {
-                        Players b = a.players.get(i);
-                        sum += b.toString() + "\n";
-                    }
-                    JOptionPane.showMessageDialog(null, sum);
-                 } 
+                        Teams a = map.get(option3);
+                        String sum = " ";
+                        for (int i=0; i<a.players.size(); i++) 
+                        {
+                            Players b = a.players.get(i);
+                            sum += b.toString() + "\n";
+                        }
+                        JOptionPane.showMessageDialog(null, sum);
+                     } 
+                }
             }
         }
-    }
-    
-    else if (choice == 2)
-    {
-        String option4 = JOptionPane.showInputDialog("1. Search by Player Name \n2. Search by Jersey Number");
-        int choice4 = Integer.parseInt(option4);
-        if (choice4 == 1)
+
+        else if (choice == 2)
         {
-            String option5 = JOptionPane.showInputDialog("Enter Player's name:");
-            int index = Collections.binarySearch(playerArray, new Players(null, 0, null, option5), searchObj.c);
-            if(index >= 0){
-                System.out.println("Player found at index " + index);
-                System.out.println("Here are the player's stats: " + playerArray.get(index).toString());
-            }
-            else if(index < 0) {
-                System.out.println("Player doesn't exist");
-            }
-        }
-        else if (choice4 == 2)
-        {
-            //Isn't working - only outputs "Player doesn't exist"
-            String option6 = JOptionPane.showInputDialog("Enter Player's Jersey Number: ");
-            int jerseyNumber = Integer.parseInt(option6);
-            int index = Collections.binarySearch(playerArray, new Players(null, jerseyNumber, null, null), searchObj.d);
-            if(index >= 0){
-                System.out.println(playerArray.get(index).getName());
-            }
-            else if(index < 0) {
-                System.out.println("Player doesn't exist");
-            }
-        }
-    }
-    else if (choice == 3)
-    {
-        String option6 = JOptionPane.showInputDialog("1. Search by Coach Name\n 2. Display a Team's coach");
-        int choice6 = Integer.parseInt(option6);
-        if (choice6 == 1)
-        {
-            String option7 = JOptionPane.showInputDialog("Enter the Coach's Name: ");
-            int index = Collections.binarySearch(coachArray, new Coaches(option7, 0), searchObj.e);
-            if(index >= 0){
-                System.out.println(coachArray.get(index).getName());
-            }
-            else if(index < 0) {
-                System.out.println("Coach doesn't exist");
-            }
-        }
-        
-        else if (choice6 == 2)
-        {
-            String option8 = JOptionPane.showInputDialog("Enter a Team: ");
-            if (map.containsKey(option8))
+            String option4 = JOptionPane.showInputDialog("1. Search by Player Name \n2. Search by Jersey Number");
+            int choice4 = Integer.parseInt(option4);
+            if (choice4 == 1)
             {
-                    Teams a = map.get(option8); 
-                    Coaches b = a.getCoach();
-                    JOptionPane.showMessageDialog(null, b.getName() + " - " + b.getRecord() + " years");
+                Collections.sort(playerArray, searchObj.c);
+                String option5 = JOptionPane.showInputDialog("Enter Player's name:");
+                int index = Collections.binarySearch(playerArray, new Players(null, 0, null, option5), searchObj.c);
+                if(index >= 0){
+                    String text1 = "Player found at index " + index;
+                    String text2 = "\nPlayer Stats: " + playerArray.get(index).toString();
+                    JOptionPane.showMessageDialog(null, text1 + text2);
+                }
+                else if(index < 0) {
+                    System.out.println("Player doesn't exist");
+                }
+            }
+            else if (choice4 == 2)
+            {
+                Collections.sort(playerArray, searchObj.d);
+                String option6 = JOptionPane.showInputDialog("Enter Player's Jersey Number: ");
+                int jerseyNumber = Integer.parseInt(option6);
+                int index = Collections.binarySearch(playerArray, new Players(null, jerseyNumber, null, null), searchObj.d);
+                if(index >= 0){
+
+                    String text1 = playerArray.get(index).toString();
+                    JOptionPane.showMessageDialog(null, text1);
+                }
+                else if(index < 0) {
+                    JOptionPane.showMessageDialog(null, "Player doesn't exist");
+                }
             }
         }
-    }
-  }  
+        else if (choice == 3)
+        {
+            Collections.sort(coachArray, searchObj.e);
+            String option6 = JOptionPane.showInputDialog("1. Search by Coach Name\n 2. Display a Team's coach");
+            int choice6 = Integer.parseInt(option6);
+            if (choice6 == 1)
+            {
+                String option7 = JOptionPane.showInputDialog("Enter the Coach's Name: ");
+                int index = Collections.binarySearch(coachArray, new Coaches(option7, 0), searchObj.e);
+                if(index >= 0){
+                    String text = coachArray.get(index).toString();
+                    JOptionPane.showMessageDialog(null, text);
+                }
+                else if(index < 0) {
+                    JOptionPane.showMessageDialog(null, "Coach doesn't exist");
+                }
+            }
+
+            else if (choice6 == 2)
+            {
+                String option8 = JOptionPane.showInputDialog("Enter a Team: ");
+                if (map.containsKey(option8))
+                {
+                        Teams a = map.get(option8); 
+                        Coaches b = a.getCoach();
+                        JOptionPane.showMessageDialog(null, b.toString());
+                }
+            }
+        }
+    } 
 }
