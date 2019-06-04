@@ -2,7 +2,7 @@ package nba;
 
 public class Coaches {
 
-    private String name;
+    protected String name;
     private Integer record;
     
     public Coaches(String name, Integer record)   {
@@ -25,4 +25,10 @@ public class Coaches {
     public void setRecord(Integer record) {
         this.record = record;
     }   
+    
+    @Override
+    public String toString()
+    {
+        return name +" - " + " Coached for: " + record + " years";
+    }
 }
