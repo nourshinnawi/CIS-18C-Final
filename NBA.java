@@ -326,7 +326,7 @@ public class NBA {
                     JOptionPane.showMessageDialog(null, text1 + text2);
                 }
                 else if(index < 0) {
-                    System.out.println("Player doesn't exist");
+                    JOptionPane.showMessageDialog(null, "Player doesn't exist");
                 }
             }
             else if (choice4 == 2)
